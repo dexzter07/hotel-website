@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .booking-wrap {
+    padding: 40px 26px 3px 54px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 79px 0;
+  }
+
+  .textarea {
+    width: 50%;
+    height: 70px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    background-color: #333333;
+    resize: none;
+    color: white;
+    font-size: larger;
+    top: -30px;
+    position: relative;
+    float: right;
+
+  }

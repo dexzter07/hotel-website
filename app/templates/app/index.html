@@ -1,0 +1,315 @@
+{% extends 'app/base.html' %}
+{% block content %}
+  <section>
+    <img src="https://gtkbasket.com/media/pics/Explore_Brush_Script_Photo_Facebook_Cover_1.jpg" alt="" width="100%"
+      height="50%" class="">
+  </section>
+
+  
+
+  <div class="booking-wrap d-flex justify-content-between align-items-center container" style="    margin-top: -75px;
+    position: relative;">
+
+  
+    <div class="single-select-box mb-30">
+
+      <div class="boking-tittle">
+        <span> Check In Date:</span>
+      </div>
+      <div class="boking-datepicker">
+        <div role="wrapper" class="gj-datepicker gj-datepicker-md gj-unselectable"><input id="datepicker1"
+            placeholder="10/12/2020" data-type="datepicker" data-guid="8bf24fa5-cbff-7f40-dd7d-80122abdf3fb"
+            data-datepicker="true" class="gj-textbox-md" role="input"><i class="gj-icon" role="right-icon">event</i>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-select-box mb-30">
+
+      <div class="boking-tittle">
+        <span>Check OutDate:</span>
+      </div>
+      <div class="boking-datepicker">
+        <div role="wrapper" class="gj-datepicker gj-datepicker-md gj-unselectable"><input id="datepicker2"
+            placeholder="12/12/2020" data-type="datepicker" data-guid="1d5bb29f-a72b-0424-3730-a315820f5d68"
+            data-datepicker="true" class="gj-textbox-md" role="input"><i class="gj-icon" role="right-icon">event</i>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-select-box mb-30">
+      <div class="boking-tittle">
+        <span>Adults:</span>
+      </div>
+      <div class="select-this">
+
+        <div class="select-itms">
+          <select name="select" id="select1" style="display: none;">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+          </select>
+          <div class="nice-select" tabindex="0"><span class="current">1</span>
+            <ul class="list">
+              <li data-value="" class="option selected">1</li>
+              <li data-value="" class="option">2</li>
+              <li data-value="" class="option">3</li>
+              <li data-value="" class="option">4</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="single-select-box mb-30">
+      <div class="boking-tittle">
+        <span>Children:</span>
+      </div>
+      <div class="select-this">
+        <form action="#">
+          <div class="select-itms">
+            <select name="select" id="select2" style="display: none;">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+            </select>
+            <div class="nice-select" tabindex="0"><span class="current">1</span>
+              <ul class="list">
+                <li data-value="" class="option selected">1</li>
+                <li data-value="" class="option">2</li>
+                <li data-value="" class="option">3</li>
+                <li data-value="" class="option">4</li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="single-select-box mb-30">
+      <div class="boking-tittle">
+        <span>Rooms:</span>
+      </div>
+      <div class="select-this">
+        <form action="#">
+          <div class="select-itms">
+            <select name="select" id="select3" style="display: none;">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+            </select>
+            <div class="nice-select" tabindex="0"><span class="current">1</span>
+              <ul class="list">
+                <li data-value="" class="option selected">1</li>
+                <li data-value="" class="option">2</li>
+                <li data-value="" class="option">3</li>
+                <li data-value="" class="option">4</li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="single-select-box pt-45 mb-30">
+      <a href="#" class="btn btn-warning">Search Availability</a>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="" width="100%" class="img-fluid">
+        <span class="textarea card">25 Years of Service Experience</span>
+      </div>
+      <div class="col-md-6 ">
+        <h5 style="color: rgb(231, 186, 36);">About our Hotel</h5>
+        <h3>Making the customer the hero of their own story</h3>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vel veritatis, asperiores repudiandae,
+          cupiditate fugiat reiciendis reprehenderit provident tenetur eos nesciunt, ad quo? Ipsam neque, maxime
+          laudantium nemo labore ratione.</p>
+        <br>
+        <p style="color: grey;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sapiente officiis
+          velit explicabo sequi laboriosam voluptas officia sit dicta ipsa recusandae, culpa harum ipsum, dolorum ex
+          veritatis quis, dolor iusto?</p>
+        <br>
+        <br>
+        <a href="" class="btn btn-lg btn-warning"> Learn more > </a>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div>
+      <h5 class="text-center" style="color: rgb(231, 186, 36);">Our Rooms</h5>
+      <h2 class="text-center"><Strong>Explore Our Hotel</Strong></h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="view overlay">
+              <img class="card-img-top" src="https://cf.bstatic.com/images/hotel/max1024x768/221/221100612.jpg"
+                alt="Card image cap">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Suit</h4>
+              <p class="card-text">₹ 1000 / per night </p>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="view overlay">
+              <img class="card-img-top" src="https://cf.bstatic.com/images/hotel/max1024x768/221/221100612.jpg"
+                alt="Card image cap">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Delux</h4>
+              <p class="card-text">₹ 1200 / per night </p>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="view overlay">
+              <img class="card-img-top" src="https://cf.bstatic.com/images/hotel/max1024x768/221/221100612.jpg"
+                alt="Card image cap">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Standard</h4>
+              <p class="card-text">₹ 900 / per night </p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="view overlay">
+              <img class="card-img-top" src="https://cf.bstatic.com/images/hotel/max1024x768/221/221100612.jpg"
+                alt="Card image cap">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Suit</h4>
+              <p class="card-text">₹ 1000 / per night </p>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="view overlay">
+              <img class="card-img-top" src="https://cf.bstatic.com/images/hotel/max1024x768/221/221100612.jpg"
+                alt="Card image cap">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Delux</h4>
+              <p class="card-text">₹ 1200 / per night </p>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="view overlay">
+              <img class="card-img-top" src="https://cf.bstatic.com/images/hotel/max1024x768/221/221100612.jpg"
+                alt="Card image cap">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Standard</h4>
+              <p class="card-text">₹ 900 / per night </p>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <div style="text-align: center;">
+        <a href="" class="btn btn-lg btn-warning text-center"> View More > </a>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section style=" background-color:black; opacity:0.8; color:white; padding:5%">
+    <div class="container text-center ">
+      <h5 style="color: rgb(231, 186, 36);">WHY CHOOSE US</h5>
+      <h2>Contact us now to get the latest deals and for the next booking</h2>
+      <br>
+      <a href="#" class="btn btn-outline-warning ">Booking Now</a>
+    </div>
+  </section>
+  <br>
+
+  <section class="container">
+    <h2 class="text-center">Contact Us</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14196.044313332546!2d88.6668452!3d27.1873886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12743dddde234945!2sHotel%20Golden%20Dragon!5e0!3m2!1sen!2sin!4v1612548310835!5m2!1sen!2sin"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+      </div>
+      <div class="col-md-6">
+        <form action="/contact/" method="post" class="form-container"><input type="hidden" name="csrfmiddlewaretoken"
+            value="dNjorGk1Jh1HVyaPcUaohz0xFQjqzpqjdHzyxE2zwqZKQnwui3t0J0O3j8erCuJy">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name='name' placeholder="Enter Your Name">
+          </div>
+          <div class="form-group">
+            <label for="name">Email</label>
+            <input type="email" class="form-control" id="email" name='email' placeholder="Enter Your Email">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Phone</label>
+            <input type="tel" class="form-control" id="phone" name='phone' placeholder="Enter Your Phone Number">
+          </div>
+
+
+          <div class="form-group">
+            <label for="desc">How May We Help You?</label>
+            <textarea class="form-control" id="desc" name='desc' rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <br>
+  {% endblock %}
